@@ -23,7 +23,7 @@
   </rowConstraints>
    <children>
       <Button alignment="CENTER" contentDisplay="CENTER" layoutX="100.0" layoutY="100.0" mnemonicParsing="false" prefHeight="100.0" prefWidth="100.0" style="-fx-background-radius: 500px;" text="Default" translateX="50.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
-      <Button mnemonicParsing="false" prefHeight="149.0" prefWidth="276.0" text="Red Only" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+      <Button mnemonicParsing="false" prefHeight="149.0" prefWidth="276.0" style="-fx-background-radius: 500px;" text="Red Only" GridPane.columnIndex="1" GridPane.rowIndex="2" />
       <Button mnemonicParsing="false" prefHeight="149.0" prefWidth="276.0" text="Green Only" GridPane.columnIndex="1" GridPane.rowIndex="3" />
       <Button mnemonicParsing="false" prefHeight="149.0" prefWidth="276.0" text="Blue Only" GridPane.columnIndex="1" GridPane.rowIndex="4" />
       <Button mnemonicParsing="false" prefHeight="119.0" prefWidth="243.0" text="Picture 1" GridPane.columnIndex="2" GridPane.rowIndex="1" />
