@@ -1,9 +1,14 @@
 package sample;
+import javafx.scene.image.Image;
+import javafx.scene.image.ImageView;
+import javafx.scene.layout.GridPane;
+
 import javax.sound.midi.*;
 
 public class Controller{
 
-    public static void main(String[] args) {
+    public void main(String[] args)
+    {
         try{
             /* Create a new Sythesizer and open it. Most of
              * the methods you will want to use to expand on this
