@@ -15,8 +15,8 @@
     <ColumnConstraints hgrow="SOMETIMES" maxWidth="272.0" minWidth="71.0" prefWidth="227.0" />
   </columnConstraints>
   <rowConstraints>
-    <RowConstraints />
-    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+    <RowConstraints maxHeight="42.0" minHeight="22.0" prefHeight="34.0" />
+    <RowConstraints maxHeight="94.0" minHeight="10.0" prefHeight="82.0" vgrow="SOMETIMES" />
     <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
       <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
       <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
@@ -47,5 +47,11 @@
             <Image url="@../../images/Pikachu.jpg" />
          </image>
       </ImageView>
+      <ImageView fitHeight="200.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="CENTER">
+         <image>
+            <Image url="@../../images/musicHeart.jpg" />
+         </image>
+      </ImageView>
+      <Label scaleX="1.75" scaleY="1.75" text="IMG to MP3 Converter" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.valignment="CENTER" />
    </children>
 </GridPane>
