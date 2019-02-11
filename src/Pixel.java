@@ -25,6 +25,7 @@ public class Pixel
     /** the y (row) location of this pixel in the picture; (0,0) is top left */
     private int y;
 
+    private int avg;
     ////////////////////// constructors /////////////////////////////////
 
     /**
@@ -245,7 +246,7 @@ public class Pixel
 
     /**
      * Method to correct a color value to be within 0 to 255
-     * @param the value to use
+     * @para the value to use
      * @return a value within 0 to 255
      */
     private static int correctValue(int value)
@@ -352,6 +353,12 @@ public class Pixel
         return average;
     }
 
+    public void setAvg(int input){
+        avg = input;
+    }
+    public int getAvg(){
+        return avg;
+    }
     /**
      * Method to return a string with information about this pixel
      * @return a string with information about this pixel

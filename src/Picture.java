@@ -239,6 +239,39 @@ public class Picture extends SimplePicture {
     }
 
 
+    public Pixel[][] pixelate(int boxCount) {
+        Pixel[][] pixels = this.getPixels2D();
+        Pixel[][] averaged = new Pixel[][]{};
+
+        Pixel placeHolder = new Pixel(this,0,0);
+
+        int totalBoxes = boxCount*boxCount;
+
+        int width = pixels.length/boxCount;
+        int height =pixels[0].length/boxCount;
+        int totalPixelCount = width*height;
+
+        int[] indexes = new int[]{0,0};
+
+        int avg=0;
+
+        for (int i =0; i < boxCount ; i++) {
+            for (int j = 0 ; j < boxCount ; j++) {
+                indexes[0] = i*width;
+                indexes[1] = j*height;
+                for(int k = indexes[0];k< (k+width);k++){
+                    for(int l = indexes[1];l< (l+height);l++){
+                        avg += (int)pixels[k][l].getAverage();
+                    }
+                }
+                avg = avg/totalPixelCount;
+                placeHolder.setAvg(avg);
+                averaged[i][j] = placeHolder;
+            }
+        }
+        return pixels;
+    }
+
 
     /**
      * Method to return a string with information about this picture.
