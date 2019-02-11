@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+
+<GridPane fx:id="circle" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="413.0" prefWidth="601.0" xmlns="http://javafx.com/javafx/8.0.172-ea" xmlns:fx="http://javafx.com/fxml/1">
+  <columnConstraints>
+      <ColumnConstraints hgrow="SOMETIMES" maxWidth="261.0" minWidth="10.0" prefWidth="188.0" />
+    <ColumnConstraints hgrow="SOMETIMES" maxWidth="356.0" minWidth="10.0" prefWidth="184.0" />
+    <ColumnConstraints hgrow="SOMETIMES" maxWidth="272.0" minWidth="71.0" prefWidth="227.0" />
+  </columnConstraints>
+  <rowConstraints>
+    <RowConstraints maxHeight="42.0" minHeight="22.0" prefHeight="34.0" />
+    <RowConstraints maxHeight="94.0" minHeight="10.0" prefHeight="82.0" vgrow="SOMETIMES" />
+    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+  </rowConstraints>
+   <children>
+      <Button alignment="CENTER" contentDisplay="CENTER" layoutX="100.0" layoutY="100.0" mnemonicParsing="false" prefHeight="90.0" prefWidth="90.0" style="-fx-background-radius: 500px;" text="Default" translateX="50.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+      <Button alignment="CENTER" mnemonicParsing="false" prefHeight="90.0" prefWidth="90.0" style="-fx-background-radius: 500px;" text="Red Only" translateX="50.0" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+      <Button mnemonicParsing="false" prefHeight="90.0" prefWidth="90.0" style="-fx-background-radius: 500px;" text="Green Only" translateX="50.0" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+      <Button mnemonicParsing="false" prefHeight="90.0" prefWidth="90.0" style="-fx-background-radius: 500px;" text="Blue Only" translateX="50.0" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+       <Label text="" />
+      <ImageView fitHeight="90.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="CENTER">
+         <image>
+            <Image url="images2/Jellyfish.JPG" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="90.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true" GridPane.halignment="CENTER" GridPane.rowIndex="3" GridPane.valignment="CENTER">
+         <image>
+             <Image url="@../../images2/redMotorcycle.jpg" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="90.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true" GridPane.halignment="CENTER" GridPane.rowIndex="4" GridPane.valignment="CENTER">
+         <image>
+            <Image url="@../../images2/Chrysanthemum.jpg" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="90.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER">
+         <image>
+            <Image url="@../../images2/Pikachu.jpg" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="200.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="CENTER">
+         <image>
+            <Image url="@../../images2/musicHeart.jpg" />
+         </image>
+      </ImageView>
+      <Label scaleX="1.75" scaleY="1.75" text="IMG to MP3 Converter" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.valignment="CENTER" />
+   </children>
+</GridPane>
