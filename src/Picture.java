@@ -135,7 +135,7 @@ public class Picture extends SimplePicture {
     {
 
         this.write(this.getFileName());
-
+        this.pixelate(8);
         for (int i=this.getArray().size()-1; i >= 0; i--) //clears notes array
         {
             this.getArray().remove(i);
@@ -239,7 +239,7 @@ public class Picture extends SimplePicture {
     }
 
 
-    public Pixel[][] pixelate(int boxCount) {
+    public Picture pixelate(int boxCount) {
         Pixel[][] pixels = this.getPixels2D();
         Pixel[][] averaged = new Pixel[][]{};
 
@@ -269,7 +269,15 @@ public class Picture extends SimplePicture {
                 averaged[i][j] = placeHolder;
             }
         }
-        return pixels;
+        Picture pic = new Picture(8,8);
+        Pixel[][] newImg = pic.getPixels2D();
+
+        for(int m = 0;m<newImg.length ; m++){
+            for(int n =0;n < newImg[0].length ;n++){
+                pic.setBasicPixel(m,n,averaged[m][n].getAvg());
+            }
+        }
+        return pic;
     }
 
 
