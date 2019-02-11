@@ -29,27 +29,27 @@
        <Label text="" />
       <ImageView fitHeight="90.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="CENTER">
          <image>
-            <Image url="@../../images/Jellyfish.JPG" />
+            <Image url="@../../images2/Jellyfish.JPG" />
          </image>
       </ImageView>
       <ImageView fitHeight="90.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true" GridPane.halignment="CENTER" GridPane.rowIndex="3" GridPane.valignment="CENTER">
          <image>
-            <Image url="@../../images/redMotorcycle.jpg" />
+            <Image url="@../../images2/redMotorcycle.jpg" />
          </image>
       </ImageView>
       <ImageView fitHeight="90.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true" GridPane.halignment="CENTER" GridPane.rowIndex="4" GridPane.valignment="CENTER">
          <image>
-            <Image url="@../../images/Chrysanthemum.jpg" />
+            <Image url="@../../images2/Chrysanthemum.jpg" />
          </image>
       </ImageView>
       <ImageView fitHeight="90.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER">
          <image>
-            <Image url="@../../images/Pikachu.jpg" />
+            <Image url="@../../images2/Pikachu.jpg" />
          </image>
       </ImageView>
       <ImageView fitHeight="200.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="CENTER">
          <image>
-            <Image url="@../../images/musicHeart.jpg" />
+            <Image url="@../../images2/musicHeart.jpg" />
          </image>
       </ImageView>
       <Label scaleX="1.75" scaleY="1.75" text="IMG to MP3 Converter" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.valignment="CENTER" />
