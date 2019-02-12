@@ -71,7 +71,7 @@ public class Picture extends SimplePicture {
             {
                 if(pixelObj.getRed() > pixelObj.getBlue() &&  pixelObj.getRed() > pixelObj.getGreen()) // finds the most dominant color.
                 {
-                notes.add(((pixelObj.getRed())/10)+35);  // Uses a formula that takes the most dominant color's value and converts it to a piano key.
+                    notes.add(((pixelObj.getRed())/10)+35);  // Uses a formula that takes the most dominant color's value and converts it to a piano key.
                 }                                        // Red represents piano keys 35-60 Green: 55-80 blue: 70-95 The scales overlap to produce a better sound
                 else                                     // If all colors are equal it converts the average of the colors ranging from 30-81
                 {
@@ -151,11 +151,11 @@ public class Picture extends SimplePicture {
                 System.out.println(this.getArray().get(i));
 
                 Synthesizer midiSynth = MidiSystem.getSynthesizer();
-                    midiSynth.open();
-                    Instrument[] instr = midiSynth.getDefaultSoundbank().getInstruments();
-                    MidiChannel[] mChannels = midiSynth.getChannels();
-                    midiSynth.loadInstrument(instr[0]);//load an instrument
-                    mChannels[0].noteOn((int) this.getArray().get(i), 1000);
+                midiSynth.open();
+                Instrument[] instr = midiSynth.getDefaultSoundbank().getInstruments();
+                MidiChannel[] mChannels = midiSynth.getChannels();
+                midiSynth.loadInstrument(instr[0]);//load an instrument
+                mChannels[0].noteOn((int) this.getArray().get(i), 1000);
 
             } catch (MidiUnavailableException e) {
                 System.out.println("unavailable");
@@ -169,6 +169,119 @@ public class Picture extends SimplePicture {
         }
     }
 
+    public void songRed()
+    {
+
+        this.write(this.getFileName());
+        this.pixelate(8);
+        for (int i=this.getArray().size()-1; i >= 0; i--) //clears notes array
+        {
+            this.getArray().remove(i);
+        }
+
+        this.redConverter(); //converts pixels to notes
+        this.clean();            //makes song sound realistic by replacing it with a more complementary key
+
+
+        for (int i=0; i < this.getArray().size(); i++) //loops through array and plays each key
+        {
+            try {
+                System.out.println(this.getArray().get(i));
+
+                Synthesizer midiSynth = MidiSystem.getSynthesizer();
+                midiSynth.open();
+                Instrument[] instr = midiSynth.getDefaultSoundbank().getInstruments();
+                MidiChannel[] mChannels = midiSynth.getChannels();
+                midiSynth.loadInstrument(instr[0]);//load an instrument
+                mChannels[0].noteOn((int) this.getArray().get(i), 1000);
+
+            } catch (MidiUnavailableException e) {
+                System.out.println("unavailable");
+            }
+
+            try {
+                Thread.sleep(200); // wait time in milliseconds to control duration
+            } catch (InterruptedException e) {
+                System.out.println("CATCH");
+            }
+        }
+    }
+
+    public void songGreen()
+    {
+
+        this.write(this.getFileName());
+        this.pixelate(8);
+        for (int i=this.getArray().size()-1; i >= 0; i--) //clears notes array
+        {
+            this.getArray().remove(i);
+        }
+
+        this.greenConverter(); //converts pixels to notes
+        this.clean();            //makes song sound realistic by replacing it with a more complementary key
+
+
+        for (int i=0; i < this.getArray().size(); i++) //loops through array and plays each key
+        {
+            try {
+                System.out.println(this.getArray().get(i));
+
+                Synthesizer midiSynth = MidiSystem.getSynthesizer();
+                midiSynth.open();
+                Instrument[] instr = midiSynth.getDefaultSoundbank().getInstruments();
+                MidiChannel[] mChannels = midiSynth.getChannels();
+                midiSynth.loadInstrument(instr[0]);//load an instrument
+                mChannels[0].noteOn((int) this.getArray().get(i), 1000);
+
+            } catch (MidiUnavailableException e) {
+                System.out.println("unavailable");
+            }
+
+            try {
+                Thread.sleep(200); // wait time in milliseconds to control duration
+            } catch (InterruptedException e) {
+                System.out.println("CATCH");
+            }
+        }
+    }
+
+    public void songBlue()
+    {
+
+        this.write(this.getFileName());
+        this.pixelate(8);
+        for (int i=this.getArray().size()-1; i >= 0; i--) //clears notes array
+        {
+            this.getArray().remove(i);
+        }
+
+        this.blueConverter(); //converts pixels to notes
+        this.clean();            //makes song sound realistic by replacing it with a more complementary key
+
+
+        for (int i=0; i < this.getArray().size(); i++) //loops through array and plays each key
+        {
+            try {
+                System.out.println(this.getArray().get(i));
+
+                Synthesizer midiSynth = MidiSystem.getSynthesizer();
+                midiSynth.open();
+                Instrument[] instr = midiSynth.getDefaultSoundbank().getInstruments();
+                MidiChannel[] mChannels = midiSynth.getChannels();
+                midiSynth.loadInstrument(instr[0]);//load an instrument
+                mChannels[0].noteOn((int) this.getArray().get(i), 1000);
+
+            } catch (MidiUnavailableException e) {
+                System.out.println("unavailable");
+            }
+
+            try {
+                Thread.sleep(200); // wait time in milliseconds to control duration
+            } catch (InterruptedException e) {
+                System.out.println("CATCH");
+            }
+        }
+    }
 
 
     /**
@@ -241,14 +354,14 @@ public class Picture extends SimplePicture {
 
     public Picture pixelate(int boxCount) {
         Pixel[][] pixels = this.getPixels2D();
-        Pixel[][] averaged = new Pixel[][]{};
+        Pixel[][] averaged = new Pixel[boxCount][boxCount];
 
         Pixel placeHolder = new Pixel(this,0,0);
 
         int totalBoxes = boxCount*boxCount;
 
-        int width = pixels.length/boxCount;
-        int height =pixels[0].length/boxCount;
+        int width = pixels[0].length/boxCount;
+        int height =pixels.length/boxCount;
         int totalPixelCount = width*height;
 
         int[] indexes = new int[]{0,0};
@@ -259,8 +372,13 @@ public class Picture extends SimplePicture {
             for (int j = 0 ; j < boxCount ; j++) {
                 indexes[0] = i*width;
                 indexes[1] = j*height;
-                for(int k = indexes[0];k< (k+width);k++){
-                    for(int l = indexes[1];l< (l+height);l++){
+                int check1 = indexes[0] + width;
+                int check2 = indexes[1] + height;
+
+                for(int k = indexes[0];k< check1;k++)
+                {
+                    for(int l = indexes[1];l< check2;l++)
+                    {
                         avg += (int)pixels[k][l].getAverage();
                     }
                 }
@@ -280,6 +398,11 @@ public class Picture extends SimplePicture {
         return pic;
     }
 
+
+    public void changePic(String filename)
+    {
+        load(filename);
+    }
 
     /**
      * Method to return a string with information about this picture.
