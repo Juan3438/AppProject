@@ -361,15 +361,15 @@ public class Picture extends SimplePicture {
         int totalBoxes = boxCount*boxCount;
 
         int width = pixels[0].length/boxCount;
-        int height =pixels.length/boxCount;
+        int height = pixels.length/boxCount;
         int totalPixelCount = width*height;
 
-        int[] indexes = new int[]{0,0};
+        int[] indexes = {0,0};
 
         int avg=0;
 
-        for (int i =0; i < boxCount ; i++) {
-            for (int j = 0 ; j < boxCount ; j++) {
+        for (int i =0; i < boxCount-1 ; i++) {
+            for (int j = 0 ; j < boxCount-1 ; j++) {
                 indexes[0] = i*width;
                 indexes[1] = j*height;
                 int check1 = indexes[0] + width;
