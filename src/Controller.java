@@ -1,6 +1,8 @@
+import javafx.fxml.FXML;
 
 public class Controller
 {
+    @FXML
     public static void makePic() {
         Picture pic = new Picture("Pikachu.jpg");
     }
