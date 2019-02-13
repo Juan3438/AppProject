@@ -1,7 +1,8 @@
+
 public class Controller
 {
-    public static void makePic(String filename) {
-        Picture pic = new Picture(filename);
+    public static void makePic() {
+        Picture pic = new Picture("Pikachu.jpg");
     }
 
     public static void main(String[] args)

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-
+<?import javafx.scene.control.*?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.image.Image?>
@@ -21,7 +21,7 @@
       <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
       <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
   </rowConstraints>
-   <children>
+   <children >
       <Button alignment="CENTER" contentDisplay="CENTER" layoutX="100.0" layoutY="100.0" mnemonicParsing="false" prefHeight="90.0" prefWidth="90.0" style="-fx-background-radius: 500px;" text="Default" translateX="50.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
       <Button alignment="CENTER" mnemonicParsing="false" prefHeight="90.0" prefWidth="90.0" style="-fx-background-radius: 500px;" text="Red Only" translateX="50.0" GridPane.columnIndex="1" GridPane.rowIndex="2" />
       <Button mnemonicParsing="false" prefHeight="90.0" prefWidth="90.0" style="-fx-background-radius: 500px;" text="Green Only" translateX="50.0" GridPane.columnIndex="1" GridPane.rowIndex="3" />
@@ -42,7 +42,7 @@
             <Image url="@../images/Chrysanthemum.jpg" />
          </image>
       </ImageView>
-      <ImageView fitHeight="90.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER">
+      <ImageView  fx:id="pikachu" onMousePressed="#makePic" fitHeight="90.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER">
          <image>
             <Image url="@../images/Pikachu.jpg" />
          </image>
