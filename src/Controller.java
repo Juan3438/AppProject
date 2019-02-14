@@ -32,4 +32,23 @@ public class Controller
         pix.setFileName(filename);
     }
 
+    public void playDef(MouseEvent e, Picture pic)
+    {
+        pic.song();
+    }
+
+    public void playRed(Picture pic)
+    {
+        pic.songRed();
+    }
+
+    public void playBlue(Picture pic)
+    {
+        pic.songBlue();
+    }
+
+    public void playGreen(Picture pic)
+    {
+        pic.songGreen();
+    }
 }
