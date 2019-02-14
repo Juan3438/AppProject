@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?import javafx.scene.control.*?>
+
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.image.Image?>
@@ -8,7 +8,7 @@
 <?import javafx.scene.layout.GridPane?>
 <?import javafx.scene.layout.RowConstraints?>
 
-<GridPane fx:id="circle" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="413.0" prefWidth="601.0" xmlns="http://javafx.com/javafx/8.0.172-ea" xmlns:fx="http://javafx.com/fxml/1">
+<GridPane fx:id="circle" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="413.0" prefWidth="601.0" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller">
   <columnConstraints>
       <ColumnConstraints hgrow="SOMETIMES" maxWidth="261.0" minWidth="10.0" prefWidth="188.0" />
     <ColumnConstraints hgrow="SOMETIMES" maxWidth="356.0" minWidth="10.0" prefWidth="184.0" />
@@ -21,33 +21,33 @@
       <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
       <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
   </rowConstraints>
-   <children >
-      <Button fx:id="pikachu" onMousePressed="#makePic" alignment="CENTER" contentDisplay="CENTER" layoutX="100.0" layoutY="100.0" mnemonicParsing="false" prefHeight="90.0" prefWidth="90.0" style="-fx-background-radius: 500px;" text="Default" translateX="50.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+   <children>
+      <Button alignment="CENTER" contentDisplay="CENTER" layoutX="100.0" layoutY="100.0" mnemonicParsing="false" prefHeight="90.0" prefWidth="90.0" style="-fx-background-radius: 500px;" text="Default" translateX="50.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
       <Button alignment="CENTER" mnemonicParsing="false" prefHeight="90.0" prefWidth="90.0" style="-fx-background-radius: 500px;" text="Red Only" translateX="50.0" GridPane.columnIndex="1" GridPane.rowIndex="2" />
       <Button mnemonicParsing="false" prefHeight="90.0" prefWidth="90.0" style="-fx-background-radius: 500px;" text="Green Only" translateX="50.0" GridPane.columnIndex="1" GridPane.rowIndex="3" />
       <Button mnemonicParsing="false" prefHeight="90.0" prefWidth="90.0" style="-fx-background-radius: 500px;" text="Blue Only" translateX="50.0" GridPane.columnIndex="1" GridPane.rowIndex="4" />
        <Label text="" />
-      <ImageView fitHeight="90.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="CENTER">
+      <ImageView fx:id="jellyfish" fitHeight="90.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="CENTER">
          <image>
             <Image url="@../images/jellyfish.PNG" />
          </image>
       </ImageView>
-      <ImageView fitHeight="90.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true" GridPane.halignment="CENTER" GridPane.rowIndex="3" GridPane.valignment="CENTER">
+      <ImageView fx:id="red" fitHeight="90.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true" GridPane.halignment="CENTER" GridPane.rowIndex="3" GridPane.valignment="CENTER">
          <image>
              <Image url="@../images/redMotorcycle.jpg" />
          </image>
       </ImageView>
-      <ImageView fitHeight="90.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true" GridPane.halignment="CENTER" GridPane.rowIndex="4" GridPane.valignment="CENTER">
+      <ImageView fx:id="flower" fitHeight="90.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true" GridPane.halignment="CENTER" GridPane.rowIndex="4" GridPane.valignment="CENTER">
          <image>
             <Image url="@../images/Chrysanthemum.jpg" />
          </image>
       </ImageView>
-      <ImageView   fitHeight="90.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER">
+      <ImageView fx:id="pikachu" fitHeight="90.0" fitWidth="200.0" onMousePressed="#makePikachu" pickOnBounds="true" preserveRatio="true" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER">
          <image>
             <Image url="@../images/Pikachu.jpg" />
          </image>
       </ImageView>
-      <ImageView fitHeight="200.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="CENTER">
+      <ImageView fx:id="jellyfish" fitHeight="200.0" fitWidth="200.0" onMousePressed="#makeJellyfish" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="CENTER">
          <image>
             <Image url="@../images/musicHeart.jpg" />
          </image>
