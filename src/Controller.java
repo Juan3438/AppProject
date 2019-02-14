@@ -9,14 +9,14 @@ public class Controller
     @FXML
     private ImageView pikachu;
 
-    public void makePikachu(MouseEvent c) {
+    public void makePikachu(MouseEvent c, String imageName) {
         Picture pic = new Picture("Pikachu.jpg");
     }
     public void makeJellyfish(MouseEvent c) {
-        Picture pic = new Picture("Pikachu.jpg");
+        Picture pic = new Picture("jellyfish.jpg");
     }
-    public void makeRed(MouseEvent c) {
-        Picture pic = new Picture("Pikachu.jpg");
+    public void makeMotor(MouseEvent c) {
+        Picture pic = new Picture("redMotorcycle.jpg");
     }
     public void makeFlower(MouseEvent c) {
         Picture pic = new Picture("Pikachu.jpg");
