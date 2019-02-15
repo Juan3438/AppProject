@@ -27,17 +27,17 @@
       <Button mnemonicParsing="false" prefHeight="90.0" prefWidth="90.0" style="-fx-background-radius: 500px;" text="Green Only" translateX="50.0" GridPane.columnIndex="1" GridPane.rowIndex="3" />
       <Button mnemonicParsing="false" prefHeight="90.0" prefWidth="90.0" style="-fx-background-radius: 500px;" text="Blue Only" translateX="50.0" GridPane.columnIndex="1" GridPane.rowIndex="4" />
        <Label text="" />
-      <ImageView fx:id="jellyfish" fitHeight="90.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="CENTER">
+      <ImageView fx:id="jellyfish" onMousePressed="#makeJellyfish" fitHeight="90.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="CENTER">
          <image>
             <Image url="@../images/jellyfish.PNG" />
          </image>
       </ImageView>
-      <ImageView fx:id="motor" fitHeight="90.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true" GridPane.halignment="CENTER" GridPane.rowIndex="3" GridPane.valignment="CENTER">
+      <ImageView fx:id="motor" onMousePressed="#makeMotor" fitHeight="90.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true" GridPane.halignment="CENTER" GridPane.rowIndex="3" GridPane.valignment="CENTER">
          <image>
              <Image url="@../images/redMotorcycle.jpg" />
          </image>
       </ImageView>
-      <ImageView fx:id="flower" fitHeight="90.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true" GridPane.halignment="CENTER" GridPane.rowIndex="4" GridPane.valignment="CENTER">
+      <ImageView fx:id="flower" onMousePressed="#makeFlower" fitHeight="90.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true" GridPane.halignment="CENTER" GridPane.rowIndex="4" GridPane.valignment="CENTER">
          <image>
             <Image url="@../images/Chrysanthemum.jpg" />
          </image>
